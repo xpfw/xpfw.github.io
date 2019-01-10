@@ -1,6 +1,6 @@
 # IBackendClient
 
-Connecting your own backend to *xpfw* is as easy as implementing the `IBackendClient` interface.
+Connecting your own backend to *xpfw* is done by implementing the `IBackendClient` interface.
 
 For an offline plugin you only need to implement
 - `get`

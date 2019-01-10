@@ -5540,6 +5540,10 @@ a.tag:hover {
 .pullUp {
   margin-top: -0.8rem; }
 
+.inline {
+  display: flex;
+  flex-direction: row; }
+
 .pullUpMargin {
   margin-top: -2rem; }
 
