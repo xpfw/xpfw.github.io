@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Prebuilt Jest Tests - XPFW Documentation</title>
+        <title>IBackendClient - XPFW Documentation</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -11,21 +11,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
@@ -35,7 +35,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
         </script>
 
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="expanded "><a href="index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="expanded "><a href="form/usage.html"><strong aria-hidden="true">2.</strong> Form</a></li><li><ol class="section"><li class="expanded "><a href="form/usage.html"><strong aria-hidden="true">2.1.</strong> Usage</a></li><li class="expanded "><a href="form/theming.html"><strong aria-hidden="true">2.2.</strong> Theming</a></li></ol></li><li class="expanded "><a href="data/usage.html"><strong aria-hidden="true">3.</strong> Data</a></li><li><ol class="section"><li class="expanded "><a href="data/usage.html"><strong aria-hidden="true">3.1.</strong> Usage</a></li><li class="expanded "><a href="data/ibackendclient.html"><strong aria-hidden="true">3.2.</strong> IBackendClient</a></li></ol></li><li class="expanded "><a href="stacks/overview.html"><strong aria-hidden="true">4.</strong> Stacks</a></li><li><ol class="section"><li class="expanded "><a href="stacks/feathers.html"><strong aria-hidden="true">4.1.</strong> Feathers</a></li><li class="expanded "><a href="stacks/nedb.html"><strong aria-hidden="true">4.2.</strong> NeDB</a></li></ol></li><li class="expanded "><a href="testing.html" class="active"><strong aria-hidden="true">5.</strong> Prebuilt Jest Tests</a></li></ol>
+                <ol class="chapter"><li class="expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="expanded "><a href="../form/usage.html"><strong aria-hidden="true">2.</strong> Form</a></li><li><ol class="section"><li class="expanded "><a href="../form/usage.html"><strong aria-hidden="true">2.1.</strong> Usage</a></li><li class="expanded "><a href="../form/theming.html"><strong aria-hidden="true">2.2.</strong> Theming</a></li></ol></li><li class="expanded "><a href="../data/usage.html"><strong aria-hidden="true">3.</strong> Data</a></li><li><ol class="section"><li class="expanded "><a href="../data/usage.html"><strong aria-hidden="true">3.1.</strong> Usage</a></li><li class="expanded "><a href="../data/ibackendclient.html" class="active"><strong aria-hidden="true">3.2.</strong> IBackendClient</a></li></ol></li><li class="expanded "><a href="../stacks/overview.html"><strong aria-hidden="true">4.</strong> Stacks</a></li><li><ol class="section"><li class="expanded "><a href="../stacks/feathers.html"><strong aria-hidden="true">4.1.</strong> Feathers</a></li><li class="expanded "><a href="../stacks/nedb.html"><strong aria-hidden="true">4.2.</strong> NeDB</a></li></ol></li><li class="expanded "><a href="../testing.html"><strong aria-hidden="true">5.</strong> Prebuilt Jest Tests</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -116,7 +116,7 @@
                         <h1 class="menu-title">XPFW Documentation</h1>
 
                         <div class="right-buttons">
-                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
                             
@@ -148,48 +148,41 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#testing" id="testing">Testing</a></h1>
-<p><em>xpfw</em> delivers premade tests which you can include to get increase code coverage out of your custom styled components!</p>
-<p>All tests follow the same &quot;API&quot;. It is an exported function, which you give your readily usable React Component. That will be rendered then.</p>
-<h1><a class="header" href="#form-tests" id="form-tests">Form Tests</a></h1>
-<p>For tests regarding form component themes there is <a href="https://github.com/xpfw/xpfw/tree/master/packages/form-tests">@xpfw/form-tests</a>
-It contains the following tests:</p>
+                        <h1><a class="header" href="#ibackendclient" id="ibackendclient">IBackendClient</a></h1>
+<p>Connecting your own backend to <em>xpfw</em> is done by implementing the <code>IBackendClient</code> interface.</p>
+<p>The implementation of the <a href="https://github.com/xpfw/xpfw/blob/v1rewrite/packages/data-nedb/src/nedb.ts">NeDB</a> and <a href="https://github.com/xpfw/xpfw/blob/v1rewrite/packages/data-feathers/src/feathers.ts">feathers</a> client offer a great example on how to do on and offline backends!</p>
+<p>For an offline plugin you only need to implement</p>
 <ul>
-<li>booleanTest</li>
-<li>stringTest</li>
-<li>arrayTest</li>
-<li>dateTest</li>
-<li>locationTest</li>
-<li>objectTest</li>
-<li>selectTest</li>
+<li><code>get</code></li>
+<li><code>create</code></li>
+<li><code>remove</code></li>
+<li><code>find</code></li>
+<li><code>patch</code></li>
 </ul>
-<h1><a class="header" href="#data-tests" id="data-tests">Data Tests</a></h1>
-<p>For tests regarding data / CRUD components there is <a href="https://github.com/xpfw/xpfw/tree/master/packages/data-tests">@xpfw/data-tests</a>
-It provides the following tests:</p>
+<p>For an online plugin you also need to implement</p>
 <ul>
-<li>authTest</li>
-<li>createTest</li>
-<li>editTest</li>
-<li>removeTest</li>
-<li>showTest</li>
-<li>listTest</li>
-<li>relationshipTest</li>
+<li><code>connectTo</code></li>
+<li><code>disconnect</code></li>
+<li><code>login</code></li>
+<li><code>register</code></li>
+<li><code>logout</code></li>
 </ul>
-<blockquote>
-<h1><a class="header" href="#caution-mongodb-required" id="caution-mongodb-required">Caution! MongoDB required</a></h1>
-<p>A running MongoDB instance on localhost is required to run the data tests!</p>
-</blockquote>
+<p>Since <em>xpfw</em> is strongly typed your IDE should tell you what parameters to expect. In case you are not using typescript see an abstract from the API docs below.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="stacks/nedb.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../data/usage.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
+                        
+                            <a rel="next" href="../stacks/overview.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -199,11 +192,15 @@ It provides the following tests:</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="stacks/nedb.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="../data/usage.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
+                
+                    <a href="../stacks/overview.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 
@@ -224,14 +221,14 @@ It provides the following tests:</p>
         
 
         
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         

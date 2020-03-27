@@ -1,622 +1,231 @@
-
 <!DOCTYPE HTML>
-<html lang="en" >
+<html lang="en" class="sidebar-visible no-js light">
     <head>
+        <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
+        <title>Usage - XPFW Documentation</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Form · xpfw docs</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
-    
-    
-        <link rel="stylesheet" href="../gitbook/style.css">
-    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
 
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codetabs/codetabs.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
         
 
-    
-
-    
         
-        <link rel="stylesheet" href="../website-1547109325238.css">
-        
-    
-
-        
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    
-    
-        <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
-    
-    
-    
-
-    
-    <link rel="next" href="usage.html" />
-    
-    
-    <link rel="prev" href="../core/types.html" />
-    
-
     </head>
     <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            <div class="book-logo">   
-                
-                <img src="/assets/logo.png"/>
-                
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="expanded "><a href="../form/usage.html" class="active"><strong aria-hidden="true">2.</strong> Form</a></li><li><ol class="section"><li class="expanded "><a href="../form/usage.html" class="active"><strong aria-hidden="true">2.1.</strong> Usage</a></li><li class="expanded "><a href="../form/theming.html"><strong aria-hidden="true">2.2.</strong> Theming</a></li></ol></li><li class="expanded "><a href="../data/usage.html"><strong aria-hidden="true">3.</strong> Data</a></li><li><ol class="section"><li class="expanded "><a href="../data/usage.html"><strong aria-hidden="true">3.1.</strong> Usage</a></li><li class="expanded "><a href="../data/ibackendclient.html"><strong aria-hidden="true">3.2.</strong> IBackendClient</a></li></ol></li><li class="expanded "><a href="../stacks/overview.html"><strong aria-hidden="true">4.</strong> Stacks</a></li><li><ol class="section"><li class="expanded "><a href="../stacks/feathers.html"><strong aria-hidden="true">4.1.</strong> Feathers</a></li><li class="expanded "><a href="../stacks/nedb.html"><strong aria-hidden="true">4.2.</strong> NeDB</a></li></ol></li><li class="expanded "><a href="../testing.html"><strong aria-hidden="true">5.</strong> Prebuilt Jest Tests</a></li></ol>
             </div>
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
 
-            
-                <nav role="navigation">
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
                 
-
-
-<ul class="summary">
-    
-    
-
-    
-
-    
-        
-        
-        <li class="header ">Overview</li>
-        
-        
-    
-        
-        <li class="chapter 
-              "
-            data-level="1.1" 
-            data-path="../">
-
-            
-                <a href="../">
-            
-                    
-                    Introduction
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        
-        <li class="header  selected ">Documentation</li>
-        
-        
-    
-        
-        <li class="chapter 
-              "
-            data-level="2.1" 
-            data-path="../core/definitions.html">
-
-            
-                <a href="../core/definitions.html">
-            
-                    
-                    Core
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-                
-    
-        
-        <li class="chapter 
-               hide "
-            data-level="2.1.1" 
-            data-path="../core/definitions.html">
-
-            
-                <a href="../core/definitions.html">
-            
-                    
-                    Definitions
-            
-                </a>
-            
-
-            
-        </li>
-    
-        
-        <li class="chapter 
-               hide "
-            data-level="2.1.2" 
-            data-path="../core/permissions.html">
-
-            
-                <a href="../core/permissions.html">
-            
-                    
-                    Permissions
-            
-                </a>
-            
-
-            
-        </li>
-    
-        
-        <li class="chapter 
-               hide "
-            data-level="2.1.3" 
-            data-path="../core/backend.html">
-
-            
-                <a href="../core/backend.html">
-            
-                    
-                    Usage / Backend Integration
-            
-                </a>
-            
-
-            
-        </li>
-    
-        
-        <li class="chapter 
-               hide "
-            data-level="2.1.4" 
-            data-path="../core/types.html">
-
-            
-                <a href="../core/types.html">
-            
-                    
-                    Custom Types
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        
-        <li class="chapter 
-            active  selected  "
-            data-level="2.2" 
-            data-path="usage.html">
-
-            
-                <a href="usage.html">
-            
-                    
-                    Form
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                  
-                
-    
-        
-        <li class="chapter 
-            active  selected  "
-            data-level="2.2.1" 
-            data-path="usage.html">
-
-            
-                <a href="usage.html">
-            
-                    
-                    Usage
-            
-                </a>
-            
-
-            
-        </li>
-    
-        
-        <li class="chapter 
-              "
-            data-level="2.2.2" 
-            data-path="theming.html">
-
-            
-                <a href="theming.html">
-            
-                    
-                    Theming
-            
-                </a>
-            
-
-            
-        </li>
-    
-        
-        <li class="chapter 
-              "
-            data-level="2.2.3" 
-            data-path="types.html">
-
-            
-                <a href="types.html">
-            
-                    
-                    Custom Types
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        
-        <li class="chapter 
-              "
-            data-level="2.3" 
-            data-path="../ui/usage.html">
-
-            
-                <a href="../ui/usage.html">
-            
-                    
-                    UI
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-                
-    
-        
-        <li class="chapter 
-              "
-            data-level="2.3.1" 
-            data-path="../ui/usage.html">
-
-            
-                <a href="../ui/usage.html">
-            
-                    
-                    Usage
-            
-                </a>
-            
-
-            
-        </li>
-    
-        
-        <li class="chapter 
-              "
-            data-level="2.3.2" 
-            data-path="../ui/ibackendclient.html">
-
-            
-                <a href="../ui/ibackendclient.html">
-            
-                    
-                    IBackendClient
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        
-        <li class="chapter 
-              "
-            data-level="2.4" 
-            data-path="../customization.html">
-
-            
-                <a href="../customization.html">
-            
-                    
-                    Customization
-            
-                </a>
-            
-
-            
-        </li>
-    
-        
-        <li class="chapter 
-              "
-            data-level="2.5" 
-            data-path="../stacks/overview.html">
-
-            
-                <a href="../stacks/overview.html">
-            
-                    
-                    Stacks
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-                
-    
-        
-        <li class="chapter 
-              "
-            data-level="2.5.1" 
-            data-path="../stacks/feathers.html">
-
-            
-                <a href="../stacks/feathers.html">
-            
-                    
-                    Feathers
-            
-                </a>
-            
-
-            
-        </li>
-    
-        
-        <li class="chapter 
-              "
-            data-level="2.5.2" 
-            data-path="../stacks/nedb.html">
-
-            
-                <a href="../stacks/nedb.html">
-            
-                    
-                    NeDB
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        
-        <li class="chapter 
-              "
-            data-level="2.6" 
-            data-path="../testing.html">
-
-            
-                <a href="../testing.html">
-            
-                    
-                    Testing
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-</ul>
-
-
-                </nav>
-            
-        
-    </div>
-
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
-    
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Form</a>
-    </h1>
-</div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
                             
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="usage">Usage</h1>
-<p>To render a field use the <code>SharedField</code> component and pass it your <a href="../core/definitions.html"><code>IField</code> definition</a></p>
-<pre class="language-"><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> FieldType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@xpfw/validate&quot;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> SharedField <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@xpfw/form-shared&quot;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> registerComponents <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@xpfw/form-bulma&quot;</span>
-<span class="token comment">// Making sure that @xpfw/form-shared can find components</span>
-<span class="token function">registerComponents</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">class</span> <span class="token class-name">StaticFieldRenderer</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token punctuation">,</span> <span class="token builtin">any</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token operator">&lt;</span>SharedField field<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>mapTo<span class="token punctuation">:</span> <span class="token string">&quot;myField&quot;</span><span class="token punctuation">,</span> <span class="token keyword">type</span><span class="token punctuation">:</span> FieldType<span class="token punctuation">.</span>Text<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>Rendering a form is achieved by iterating over it&apos;s fields and rendering them in a <code>SharedField</code>.</p>
-<p>If you require readily usable create / edit pages and more check out <a href="../ui/usage.html">@xpfw/ui</a>.</p>
-<pre class="language-"><code class="lang-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> SharedField <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@xpfw/form-shared&quot;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> registerComponents <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@xpfw/form-bulma&quot;</span>
-<span class="token comment">// Making sure that @xpfw/form-shared can find components</span>
-<span class="token function">registerComponents</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">class</span> <span class="token class-name">IFormRenderer</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token operator">&lt;</span><span class="token punctuation">{</span>
-  form<span class="token punctuation">:</span> IForm
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token builtin">any</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
-  <span class="token keyword">public</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">const</span> fieldDefs <span class="token operator">=</span> <span class="token function">getFieldsFromForm</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>form<span class="token punctuation">)</span>
-    <span class="token keyword">const</span> fields <span class="token operator">=</span> fieldDefs<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>field<span class="token punctuation">:</span> IField<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token operator">&lt;</span>SharedField key<span class="token operator">=</span><span class="token punctuation">{</span>field<span class="token punctuation">.</span>mapTo<span class="token punctuation">}</span> field<span class="token operator">=</span><span class="token punctuation">{</span>field<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
-        <span class="token punctuation">{</span>fields<span class="token punctuation">}</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
-    <span class="token punctuation">)</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="info-see-it-in-action"><i class="fa fa-info"></i> Info: See it in action</h3></div><div class="panel-body"><p><a href="https://xpfw.github.io/form" target="_blank">Click here</a> to see a live demo of this example</p></div></div>
-
-                                
-                                </section>
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
                             
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
+                        </div>
 
+                        <h1 class="menu-title">XPFW Documentation</h1>
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
                         </div>
                     </div>
+                </div>
+
                 
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#usage" id="usage">Usage</a></h1>
+<p>To render a field use the <code>SharedField</code> component and pass it your JSON-Schema.</p>
+<blockquote>
+<p><a href="https://xpfw.github.io/form">Click here</a> to see a live demo of <code>@xpfw/form</code></p>
+</blockquote>
+<pre><code class="language-typescript">import { SharedField } from &quot;@xpfw/form&quot;
+import { registerComponents } from &quot;@xpfw/form-bulma&quot;
+// Making sure that @xpfw/form-shared can find components
+registerComponents()
+const StaticFieldRenderer = () =&gt; &lt;SharedField field={{mapTo: &quot;myField&quot;, type: FieldType.Text}} /&gt;
+</code></pre>
+<p>If you require readily usable create / edit pages and more check out <a href="/data/usage.html">@xpfw/data</a>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../form/usage.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
             </div>
 
-            
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                <a href="../core/types.html" class="navigation navigation-prev " aria-label="Previous page: Custom Types">
-                    <i class="fa fa-angle-left"></i>
-                </a>
+                    <a href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
-                
-                <a href="usage.html" class="navigation navigation-next " aria-label="Next page: Usage">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
 
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Form","level":"2.2","depth":1,"next":{"title":"Usage","level":"2.2.1","depth":2,"path":"form/usage.md","ref":"form/usage.md","articles":[]},"previous":{"title":"Custom Types","level":"2.1.4","depth":2,"path":"core/types.md","ref":"core/types.md","articles":[]},"dir":"ltr"},"config":{"plugins":["fontsettings","theme-gestalt","-theme-default","styles-sass-fix","prism","-highlight","callouts","codetabs"],"styles":{"website":"website-1547109325238.css"},"pluginsConfig":{"prism":{},"styles-sass-fix":{},"callouts":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","baseUrl":null,"excludeDefaultStyles":false,"doNotHideChildrenChapters":false},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"xpfw docs","language":"en","gitbook":"*","direction":"ltr"},"file":{"path":"form/usage.md","mtime":"2018-12-16T13:13:05.521Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-10T08:35:22.324Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
-</div>
+                
+                    <a href="../form/usage.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
 
         
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
+
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+
         
-    
         
-        <script src="../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
         
-    
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+
         
-    
+
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
-    
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
         
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+
         
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
 
     </body>
 </html>
-
